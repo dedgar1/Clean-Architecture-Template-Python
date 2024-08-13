@@ -4,6 +4,7 @@ from appname.domain.model import Model
 from appname.repository.memrepo import MemRepo
 
 
+@pytest.fixture
 def model_dicts():
     return [
         {"name": "model1", "id": 1},
