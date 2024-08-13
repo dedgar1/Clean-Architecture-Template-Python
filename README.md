@@ -29,3 +29,6 @@ External systems have full access to the lower layers
 ### Communication between layers.
 - Use Simple Structures from outside moving to the core
 - Use interfaces for the core moving out
+
+### How to run the app
+- From the root folder, use `FLASK_CONFIG="development" flask run -h "0.0.0.0" -p 5050`
