@@ -6,7 +6,7 @@ from appname.use_cases.model_list import model_list_use_case
 
 
 @pytest.fixture
-def domain_model():
+def domain_models():
     model1 = Model('model1', 1)
     model2 = Model('model2', 2)
     model3 = Model('model3', 3)
@@ -16,7 +16,7 @@ def domain_model():
 
 def test_model_list_without_parameters(domain_models):
     repo = mock.Mock()
-    repo.list.retur_value = domain_models
+    repo.list.return_value = domain_models
     result = model_list_use_case(repo)
     repo.list.assert_called_with()
     assert result == domain_models
